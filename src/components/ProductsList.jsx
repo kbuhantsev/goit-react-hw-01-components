@@ -1,7 +1,7 @@
 import Product from './Product';
 import productsList from '../products.json';
 
-export default function ProductsList() {
+function ProductsList() {
   return (
     <div>
       <h1>Best selling products</h1>
@@ -17,3 +17,5 @@ export default function ProductsList() {
     </div>
   );
 }
+
+export default ProductsList;

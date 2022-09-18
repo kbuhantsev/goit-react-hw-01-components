@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 
-const Product = ({ imgUrl, name, price }) => {
+function Product({ imgUrl, name, price }) {
   return (
     <div>
       <img src={imgUrl} alt={name} width="640" />
@@ -9,7 +9,7 @@ const Product = ({ imgUrl, name, price }) => {
       <button type="button">Add to cart</button>
     </div>
   );
-};
+}
 
 Product.propTypes = {
   imgUrl: PropTypes.string,

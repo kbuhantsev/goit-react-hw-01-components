@@ -1,9 +1,11 @@
 import ProductsList from './ProductsList';
 
-export default function App() {
+function App() {
   return (
     <div>
       <ProductsList />
     </div>
   );
 }
+
+export default App;
