@@ -1,19 +1,19 @@
 import Product from './Product';
+import productsList from '../products.json';
 
-export default function ProductsList(props) {
+export default function ProductsList() {
   return (
     <div>
       <h1>Best selling products</h1>
-      <Product
-        imgUrl="https://images.pexels.com/photos/461198/pexels-photo-461198.jpeg?dpr=2&h=480&w=640"
-        name="Tacos With Lime"
-        price={10.99}
-      />
-      <Product
-        imgUrl="https://images.pexels.com/photos/70497/pexels-photo-70497.jpeg?dpr=2&h=480&w=640"
-        name="Fries and Burger"
-        price={14.29}
-      />
+      {productsList.map(item => (
+        <Product
+          key={item.name}
+          imgUrl={item.imgUrl}
+          name={item.name}
+          price={item.price}
+        />
+      ))}
+      ;
     </div>
   );
 }
