@@ -11,7 +11,7 @@ const Product = ({ imgUrl, name, price }) => {
   );
 };
 
-Product.PropTypes = {
+Product.propTypes = {
   imgUrl: PropTypes.string,
   name: PropTypes.string,
   price: PropTypes.number,
