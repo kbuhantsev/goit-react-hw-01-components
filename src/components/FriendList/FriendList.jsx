@@ -1,14 +1,11 @@
 import css from './FriendList.module.css';
+import FriendListItem from './FriendListItem';
 
 function FriendList({ friends }) {
   return (
-    <ul className={css.frienList}>
-      {friends.map(({ avatar, name, isOnline, id }) => (
-        <li key={id} className={css.item}>
-          <span className={css.status}></span>
-          <img className={css.avatar} src={avatar} alt={name} width="48" />
-          <p className={css.name}>{name}</p>
-        </li>
+    <ul className={css.friendList}>
+      {friends.map(item => (
+        <FriendListItem key={item.id} item={item} />
       ))}
     </ul>
   );

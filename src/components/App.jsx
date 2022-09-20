@@ -3,10 +3,12 @@ import Section from './Section/Section';
 import Container from './Container/Container';
 import Statistics from './Statistics/Statistics';
 import FriendList from './FriendList/FriendList';
+import TransactionHistory from './TransactionHistory/TransactionHistory';
 
 import users from '../user.json';
 import statistics from '../data.json';
 import friends from '../friends.json';
+import transactions from '../transactions.json';
 
 function App() {
   return (
@@ -27,7 +29,9 @@ function App() {
       <Section title="3 - Список друзей">
         <FriendList friends={friends} />
       </Section>
-      <Section title="4 - История транзакций"></Section>
+      <Section title="4 - История транзакций">
+        <TransactionHistory items={transactions} />
+      </Section>
     </Container>
   );
 }
