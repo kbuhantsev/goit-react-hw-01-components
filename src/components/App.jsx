@@ -1,10 +1,19 @@
-import ProductsList from './ProductsList';
+import Profile from './Profile/Profile';
+import Section from './Section/Section';
+import Container from './Container/Container';
+
+import userData from '../user.json';
 
 function App() {
   return (
-    <div>
-      <ProductsList />
-    </div>
+    <Container>
+      <Section title="1 - Профиль социальной сети">
+        <Profile userData={userData} />
+      </Section>
+      <Section title="2- Секция статистики"></Section>
+      <Section title="3 - Список друзей"></Section>
+      <Section title="4 - История транзакций"></Section>
+    </Container>
   );
 }
 
