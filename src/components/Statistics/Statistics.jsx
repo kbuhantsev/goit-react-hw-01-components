@@ -6,14 +6,14 @@ function Statistics({ title, stats }) {
       {!!title ? <h2 className={css.title}>{title}</h2> : ''}
 
       <ul className={css.statList}>
-        {stats.map(item => (
+        {stats.map(({ id, label, percentage }) => (
           <li
-            key={item.id}
+            key={id}
             className={css.item}
             style={{ backgroundColor: getRandomHexColor() }}
           >
-            <span className={css.label}>{item.label}</span>
-            <span className={css.percentage}>{item.percentage}%</span>
+            <span className={css.label}>{label}</span>
+            <span className={css.percentage}>{percentage}%</span>
           </li>
         ))}
       </ul>

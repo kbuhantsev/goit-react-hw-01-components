@@ -2,27 +2,31 @@ import Profile from './Profile/Profile';
 import Section from './Section/Section';
 import Container from './Container/Container';
 import Statistics from './Statistics/Statistics';
+import FriendList from './FriendList/FriendList';
 
-import userData from '../user.json';
-import statisticsData from '../data.json';
+import users from '../user.json';
+import statistics from '../data.json';
+import friends from '../friends.json';
 
 function App() {
   return (
     <Container>
       <Section title="1 - Профиль социальной сети">
         <Profile
-          username={userData.username}
-          tag={userData.tag}
-          location={userData.location}
-          avatar={userData.avatar}
-          stats={userData.stats}
+          username={users.username}
+          tag={users.tag}
+          location={users.location}
+          avatar={users.avatar}
+          stats={users.stats}
         />
       </Section>
       <Section title="2- Секция статистики">
-        <Statistics title={'Upload stats'} stats={statisticsData} />
-        <Statistics stats={statisticsData} />
+        <Statistics title={'Upload stats'} stats={statistics} />
+        <Statistics stats={statistics} />
       </Section>
-      <Section title="3 - Список друзей"></Section>
+      <Section title="3 - Список друзей">
+        <FriendList friends={friends} />
+      </Section>
       <Section title="4 - История транзакций"></Section>
     </Container>
   );
