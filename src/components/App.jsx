@@ -8,7 +8,13 @@ function App() {
   return (
     <Container>
       <Section title="1 - Профиль социальной сети">
-        <Profile userData={userData} />
+        <Profile
+          username={userData.username}
+          tag={userData.tag}
+          location={userData.location}
+          avatar={userData.avatar}
+          stats={userData.stats}
+        />
       </Section>
       <Section title="2- Секция статистики"></Section>
       <Section title="3 - Список друзей"></Section>
