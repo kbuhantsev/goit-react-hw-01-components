@@ -1,4 +1,5 @@
 import clsx from 'clsx';
+import PropTypes from 'prop-types';
 import css from './FriendListItem.module.css';
 
 function FriendListItem({ item }) {
@@ -16,5 +17,14 @@ function FriendListItem({ item }) {
     </li>
   );
 }
+
+FriendListItem.propTypes = {
+  item: PropTypes.exact({
+    avatar: PropTypes.string.isRequired,
+    name: PropTypes.string.isRequired,
+    isOnline: PropTypes.bool.isRequired,
+    id: PropTypes.number.isRequired,
+  }),
+};
 
 export default FriendListItem;
