@@ -3,6 +3,7 @@ import styled from '@emotion/styled';
 const variables = {
   darkFontColor: 'rgba(0, 0, 0, 0.7)',
   lightFontColor: '#9aa5b0',
+  statBgColor: '#f3f6f9',
 };
 
 export const ProfileDiv = styled.div`
@@ -60,7 +61,7 @@ export const Stats = styled.ul`
     gap: 5px;
     width: 100%;
     height: 70px;
-    background-color: #f3f6f9;
+    background-color: ${variables.statBgColor};
 
     &:first-of-type {
       border-bottom-left-radius: 5px;
