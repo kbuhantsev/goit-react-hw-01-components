@@ -62,7 +62,7 @@ export const Stats = styled.ul`
     height: 70px;
     background-color: #f3f6f9;
 
-    &:first-child {
+    &:first-of-type {
       border-bottom-left-radius: 5px;
     }
     &:last-child {

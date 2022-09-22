@@ -31,6 +31,12 @@ export const StatItem = styled.li`
   width: 100%;
   padding: 10px;
   box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.3);
+  &:first-of-type {
+    border-bottom-left-radius: 5px;
+  }
+  &:last-child {
+    border-bottom-right-radius: 5px;
+  }
 `;
 
 export const StatLabel = styled.span`

@@ -1,14 +1,14 @@
-import css from './FriendList.module.css';
 import PropTypes from 'prop-types';
 import FriendListItem from './FriendListItem';
+import { FriendListUl } from './FriendList.styled';
 
 function FriendList({ friends }) {
   return (
-    <ul className={css.friendList}>
+    <FriendListUl>
       {friends.map(item => (
         <FriendListItem key={item.id} item={item} />
       ))}
-    </ul>
+    </FriendListUl>
   );
 }
 

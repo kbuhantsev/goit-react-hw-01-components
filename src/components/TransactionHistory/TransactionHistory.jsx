@@ -1,8 +1,9 @@
-import css from './TransactionHistory.module.css';
+import PropTypes from 'prop-types';
+import { TransactionTable } from './TransactionHistory.styled';
 
 function TransactionHistory({ items }) {
   return (
-    <table className={css.transactionHistory}>
+    <TransactionTable>
       <thead>
         <tr>
           <th>Type</th>
@@ -20,8 +21,19 @@ function TransactionHistory({ items }) {
           </tr>
         ))}
       </tbody>
-    </table>
+    </TransactionTable>
   );
 }
+
+TransactionHistory.propTypes = {
+  items: PropTypes.arrayOf(
+    PropTypes.exact({
+      id: PropTypes.string.isRequired,
+      type: PropTypes.string.isRequired,
+      amount: PropTypes.string.isRequired,
+      currency: PropTypes.string.isRequired,
+    })
+  ).isRequired,
+};
 
 export default TransactionHistory;
