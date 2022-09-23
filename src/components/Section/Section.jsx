@@ -1,12 +1,12 @@
+import { Box } from 'components/Box';
 import PropTypes from 'prop-types';
-import { SectionStyle } from './Section.styled';
 
 function Section({ title, children }) {
   return (
-    <SectionStyle>
+    <Box as="section" pt="20px" pb="20px" bg="#e7ecf2">
       {title && <h2>{title}</h2>}
       {children}
-    </SectionStyle>
+    </Box>
   );
 }
 

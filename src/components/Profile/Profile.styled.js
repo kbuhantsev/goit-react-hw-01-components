@@ -1,10 +1,5 @@
-import styled from '@emotion/styled';
-
-const variables = {
-  darkFontColor: 'rgba(0, 0, 0, 0.7)',
-  lightFontColor: '#9aa5b0',
-  statBgColor: '#f3f6f9',
-};
+import styled from 'styled-components';
+import { theme } from 'theme';
 
 export const ProfileDiv = styled.div`
   display: flex;
@@ -17,31 +12,22 @@ export const ProfileDiv = styled.div`
   background-color: white;
   border-radius: 5px;
 
-  color: ${variables.lightFontColor};
+  color: ${theme.colors.lightFreyFont};
   font-weight: 500;
 
   box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.3);
 `;
 
-export const Description = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 20px;
-  padding-top: 30px;
-  padding-bottom: 30px;
-`;
-
 export const Avatar = styled.img`
   width: 10em;
   border-radius: 50%;
-  background-color: ${variables.lightFontColor};
+  background-color: ${theme.colors.lightFreyFont};
 `;
 
 export const Name = styled.p`
   font-size: 2em;
   font-weight: 700;
-  color: ${variables.darkFontColor};
+  color: ${theme.colors.darkGreyFont};
 `;
 
 export const UserContacts = styled.p`
@@ -51,7 +37,7 @@ export const UserContacts = styled.p`
 export const Stats = styled.ul`
   display: flex;
   width: 100%;
-  border-top: 1px solid ${variables.lightFontColor};
+  border-top: 1px solid inherit;
 
   & > li {
     display: flex;
@@ -61,7 +47,7 @@ export const Stats = styled.ul`
     gap: 5px;
     width: 100%;
     height: 70px;
-    background-color: ${variables.statBgColor};
+    background-color: ${theme.colors.statBgColor};
 
     &:first-of-type {
       border-bottom-left-radius: 5px;
@@ -70,7 +56,7 @@ export const Stats = styled.ul`
       border-bottom-right-radius: 5px;
     }
     &:not(:last-child) {
-      border-right: 1px solid ${variables.lightFontColor};
+      border-right: 1px solid ${theme.colors.lightFreyFont};
     }
   }
 `;
@@ -83,5 +69,5 @@ export const Label = styled.span`
 export const Quantity = styled.span`
   font-size: 1.3em;
   font-weight: 700;
-  color: ${variables.darkFontColor};
+  color: ${theme.colors.darkGreyFont};
 `;

@@ -1,4 +1,4 @@
-import styled from '@emotion/styled';
+import styled from 'styled-components';
 
 export const StatTitle = styled.h2`
   text-transform: uppercase;

@@ -1,7 +1,8 @@
+import { Box } from 'components/Box';
 import PropTypes from 'prop-types';
 import {
   ProfileDiv,
-  Description,
+  // Description,
   Avatar,
   Name,
   UserContacts,
@@ -15,12 +16,19 @@ function Profile({ username, tag, location, avatar, stats }) {
 
   return (
     <ProfileDiv>
-      <Description>
+      <Box
+        display="flex"
+        flexDirection="column"
+        alignItems="center"
+        gap="20px"
+        pt="30px"
+        pb="30px"
+      >
         <Avatar src={avatar} alt={tag} />
         <Name>{username}</Name>
         <UserContacts>@{tag}</UserContacts>
         <UserContacts>{location}</UserContacts>
-      </Description>
+      </Box>
 
       <Stats>
         <li>

@@ -5,18 +5,17 @@ import Statistics from './Statistics/Statistics';
 import FriendList from './FriendList/FriendList';
 import TransactionHistory from './TransactionHistory/TransactionHistory';
 
-import { Global } from '@emotion/react';
 import { GlobalStyles } from './GlobalStyles/GlobalStyles.styled';
 
-import users from '../user.json';
-import statistics from '../data.json';
-import friends from '../friends.json';
-import transactions from '../transactions.json';
+import users from './Profile/user.json';
+import statistics from './Statistics/data.json';
+import friends from './FriendList/friends.json';
+import transactions from './TransactionHistory/transactions.json';
 
 function App() {
   return (
     <>
-      <Global styles={GlobalStyles} />
+      <GlobalStyles />
       <Container>
         <Section title="1 - Профиль социальной сети">
           <Profile
