@@ -7,6 +7,7 @@ import {
   background,
   border,
   shadow,
+  typography,
 } from 'styled-system';
 
 export const Box = styled.div`
@@ -17,5 +18,6 @@ export const Box = styled.div`
   ${background};
   ${border};
   ${shadow};
+  ${typography};
   gap: ${({ gap }) => gap || ''};
 `;

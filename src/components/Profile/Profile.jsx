@@ -2,7 +2,6 @@ import { Box } from 'components/Box';
 import PropTypes from 'prop-types';
 import {
   ProfileDiv,
-  // Description,
   Avatar,
   Name,
   UserContacts,
@@ -32,7 +31,7 @@ function Profile({ username, tag, location, avatar, stats }) {
 
       <Stats>
         <li>
-          <Label>Followers</Label>
+          <Label> Followers</Label>
           <Quantity>{followers}</Quantity>
         </li>
         <li>
