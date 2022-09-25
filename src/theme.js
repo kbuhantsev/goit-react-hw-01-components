@@ -11,6 +11,7 @@ export const theme = {
     darkGreyFont: '#4f4f4f',
     lightFreyFont: '#9aa5b0',
     statBgColor: '#f3f6f9',
+    sectionBgColor: '#e7ecf2',
   },
   space: [0, 2, 4, 8, 16, 32, 64, 128, 256],
   fonts: {

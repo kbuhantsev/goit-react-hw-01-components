@@ -37,7 +37,7 @@ export const UserContacts = styled.p`
 export const Stats = styled.ul`
   display: flex;
   width: 100%;
-  border-top: 1px solid inherit;
+  border-top: 1px solid ${theme.colors.lightFreyFont};
 
   & > li {
     display: flex;

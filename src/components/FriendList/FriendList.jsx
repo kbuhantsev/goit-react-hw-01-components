@@ -1,14 +1,14 @@
 import PropTypes from 'prop-types';
 import FriendListItem from './FriendListItem';
-import { FriendListUl } from './FriendList.styled';
+import { Box } from '../Box';
 
 function FriendList({ friends }) {
   return (
-    <FriendListUl>
+    <Box display="flex" flexDirection="column" alignItems="center" gap="20px">
       {friends.map(item => (
         <FriendListItem key={item.id} item={item} />
       ))}
-    </FriendListUl>
+    </Box>
   );
 }
 
