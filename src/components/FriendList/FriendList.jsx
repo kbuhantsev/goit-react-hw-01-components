@@ -1,14 +1,17 @@
 import PropTypes from 'prop-types';
 import FriendListItem from './FriendListItem';
 import { Box } from '../Box';
+import { useTheme } from 'styled-components';
 
 function FriendList({ friends }) {
+  const theme = useTheme();
   return (
     <Box
-      display="flex"
       flexDirection="column"
       alignItems="center"
-      gridGap="20px"
+      gridGap={theme.space[4]}
+      pt={theme.space[5]}
+      pb={theme.space[5]}
     >
       {friends.map(item => (
         <FriendListItem key={item.id} item={item} />

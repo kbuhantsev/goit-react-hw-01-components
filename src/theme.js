@@ -14,18 +14,13 @@ export const theme = {
     sectionBgColor: '#e7ecf2',
   },
   space: [0, 2, 4, 8, 16, 32, 64, 128, 256],
+
   fonts: {
     body: 'system-ui, sans-serif',
     heading: 'system-ui, sans-serif',
     monospace: 'Menlo, monospace',
   },
-  fontSizes: {
-    xs: '12px',
-    s: '14px',
-    m: '16px',
-    l: '32px',
-    xl: '64px',
-  },
+  fontSizes: [12, 14, 16, 20, 24, 32],
   fontWeights: {
     normal: 400,
     bold: 700,
@@ -40,7 +35,12 @@ export const theme = {
   },
   radii: {
     none: '0',
-    normal: '4px',
+    normal: '5px',
     round: '50%',
   },
+
+  breakpoints: [
+    '1170px',
+    '@media (min-width: 56em) and (orientation: landscape)',
+  ],
 };

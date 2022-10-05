@@ -5,7 +5,13 @@ import { useTheme } from 'styled-components';
 function Section({ title, children }) {
   const theme = useTheme();
   return (
-    <Box as="section" pt="20px" pb="20px" bg={theme.colors.sectionBgColor}>
+    <Box
+      as="section"
+      flexDirection="column"
+      pt={theme.space[5]}
+      pb={theme.space[5]}
+      bg={theme.colors.sectionBgColor}
+    >
       {title && <h2>{title}</h2>}
       {children}
     </Box>

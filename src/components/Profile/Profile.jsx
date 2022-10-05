@@ -1,5 +1,6 @@
 import { Box } from 'components/Box';
 import PropTypes from 'prop-types';
+import { useTheme } from 'styled-components';
 import {
   ProfileDiv,
   Avatar,
@@ -11,17 +12,17 @@ import {
 } from './Profile.styled';
 
 function Profile({ username, tag, location, avatar, stats }) {
+  const theme = useTheme();
   const { followers, views, likes } = stats;
 
   return (
     <ProfileDiv>
       <Box
-        display="flex"
         flexDirection="column"
         alignItems="center"
-        gridGap="20px"
-        pt="30px"
-        pb="30px"
+        gridGap={theme.space[4]}
+        pt={theme.space[5]}
+        pb={theme.space[5]}
       >
         <Avatar src={avatar} alt={tag} />
         <Name>{username}</Name>

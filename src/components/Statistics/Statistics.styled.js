@@ -2,8 +2,8 @@ import styled from 'styled-components';
 
 export const StatTitle = styled.h2`
   text-transform: uppercase;
-  padding-top: 30px;
-  padding-bottom: 30px;
+  padding-top: ${p => p.theme.space[4]}px;
+  padding-bottom: ${p => p.theme.space[4]}px;
   color: rgba(0, 0, 0, 0.7);
 `;
 
@@ -11,12 +11,14 @@ export const StatSect = styled.section`
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: white;
+  background-color: ${p => p.theme.colors.white};
   min-width: 300px;
   width: fit-content;
-  margin: 20px auto;
+  margin: ${p => p.theme.space[4]}px auto;
   box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.3);
-  border-radius: 5px;
+  overflow: hidden;
+  border-bottom-left-radius: ${p => p.theme.radii.normal};
+  border-bottom-right-radius: ${p => p.theme.radii.normal};
 `;
 
 export const StatList = styled.ul`
@@ -29,22 +31,22 @@ export const StatItem = styled.li`
   flex-direction: column;
   align-items: center;
   width: 100%;
-  padding: 10px;
+  padding: ${p => p.theme.space[3]}px;
   box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.3);
   &:first-of-type {
-    border-bottom-left-radius: 5px;
+    border-bottom-left-radius: ${p => p.theme.radii.normal};
   }
   &:last-child {
-    border-bottom-right-radius: 5px;
+    border-bottom-right-radius: ${p => p.theme.radii.normal};
   }
 `;
 
 export const StatLabel = styled.span`
-  color: white;
-  font-size: 0.7em;
-  margin-bottom: 5px;
+  color: ${p => p.theme.colors.white};
+  font-size: ${p => p.theme.fontSizes[0]}px;
+  margin-bottom: ${p => p.theme.space[2]}px;
 `;
 
 export const StatPercentage = styled.span`
-  color: white;
+  color: ${p => p.theme.colors.white};
 `;
