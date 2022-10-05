@@ -1,8 +1,9 @@
 import { Box } from 'components/Box';
 import PropTypes from 'prop-types';
-import { theme } from 'theme';
+import { useTheme } from 'styled-components';
 
 function Section({ title, children }) {
+  const theme = useTheme();
   return (
     <Box as="section" pt="20px" pb="20px" bg={theme.colors.sectionBgColor}>
       {title && <h2>{title}</h2>}

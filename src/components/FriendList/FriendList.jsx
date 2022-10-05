@@ -4,7 +4,12 @@ import { Box } from '../Box';
 
 function FriendList({ friends }) {
   return (
-    <Box display="flex" flexDirection="column" alignItems="center" gap="20px">
+    <Box
+      display="flex"
+      flexDirection="column"
+      alignItems="center"
+      gridGap="20px"
+    >
       {friends.map(item => (
         <FriendListItem key={item.id} item={item} />
       ))}

@@ -19,7 +19,7 @@ function Profile({ username, tag, location, avatar, stats }) {
         display="flex"
         flexDirection="column"
         alignItems="center"
-        gap="20px"
+        gridGap="20px"
         pt="30px"
         pb="30px"
       >

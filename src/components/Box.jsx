@@ -8,16 +8,17 @@ import {
   border,
   shadow,
   typography,
+  grid,
 } from 'styled-system';
 
-export const Box = styled.div`
-  ${space};
-  ${color};
-  ${layout};
-  ${flexbox};
-  ${background};
-  ${border};
-  ${shadow};
-  ${typography};
-  gap: ${({ gap }) => gap || ''};
-`;
+export const Box = styled.div(
+  space,
+  color,
+  layout,
+  flexbox,
+  background,
+  border,
+  shadow,
+  typography,
+  grid
+);

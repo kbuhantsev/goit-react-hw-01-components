@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { theme } from 'theme';
 
 export const ProfileDiv = styled.div`
   display: flex;
@@ -12,7 +11,7 @@ export const ProfileDiv = styled.div`
   background-color: white;
   border-radius: 5px;
 
-  color: ${theme.colors.lightFreyFont};
+  color: ${p => p.theme.colors.lightFreyFont};
   font-weight: 500;
 
   box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.3);
@@ -21,13 +20,13 @@ export const ProfileDiv = styled.div`
 export const Avatar = styled.img`
   width: 10em;
   border-radius: 50%;
-  background-color: ${theme.colors.lightFreyFont};
+  background-color: ${p => p.theme.colors.lightFreyFont};
 `;
 
 export const Name = styled.p`
   font-size: 2em;
   font-weight: 700;
-  color: ${theme.colors.darkGreyFont};
+  color: ${p => p.theme.colors.darkGreyFont};
 `;
 
 export const UserContacts = styled.p`
@@ -37,7 +36,7 @@ export const UserContacts = styled.p`
 export const Stats = styled.ul`
   display: flex;
   width: 100%;
-  border-top: 1px solid ${theme.colors.lightFreyFont};
+  border-top: 1px solid ${p => p.theme.colors.lightFreyFont};
 
   & > li {
     display: flex;
@@ -47,7 +46,7 @@ export const Stats = styled.ul`
     gap: 5px;
     width: 100%;
     height: 70px;
-    background-color: ${theme.colors.statBgColor};
+    background-color: ${p => p.theme.colors.statBgColor};
 
     &:first-of-type {
       border-bottom-left-radius: 5px;
@@ -56,7 +55,7 @@ export const Stats = styled.ul`
       border-bottom-right-radius: 5px;
     }
     &:not(:last-child) {
-      border-right: 1px solid ${theme.colors.lightFreyFont};
+      border-right: 1px solid ${p => p.theme.colors.lightFreyFont};
     }
   }
 `;
@@ -69,5 +68,5 @@ export const Label = styled.span`
 export const Quantity = styled.span`
   font-size: 1.3em;
   font-weight: 700;
-  color: ${theme.colors.darkGreyFont};
+  color: ${p => p.theme.colors.darkGreyFont};
 `;
