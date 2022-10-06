@@ -12,7 +12,7 @@ import { getRandomHexColor } from 'components/utils';
 function Statistics({ title, stats }) {
   return (
     <StatSect>
-      {!!title ? <StatTitle>{title}</StatTitle> : ''}
+      {title && <StatTitle>{title.toUpperCase()}</StatTitle>}
 
       <StatList>
         {stats.map(({ id, label, percentage }) => (

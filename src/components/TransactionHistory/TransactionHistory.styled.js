@@ -5,30 +5,25 @@ export const TransactionTable = styled.table`
   table-layout: fixed;
   width: 50%;
   border-collapse: collapse;
-  border: 1px solid lightgray;
+  border: ${p => p.theme.borders.normal} ${p => p.theme.colors.lightGreyFont};
 
   thead th {
     width: 33.33%;
-    background-color: lightskyblue;
-    color: white;
+    background-color: ${p => p.theme.colors.lightBlue};
+    color: ${p => p.theme.colors.white};
   }
 
   th,
   td {
-    padding: 10px;
-
-    border: 1px solid lightgray;
+    padding: ${p => p.theme.space[3]}px;
+    border: ${p => p.theme.borders.normal} ${p => p.theme.colors.lightGreyFont};
   }
 
   td {
     padding-left: calc((100% / 3 / 2) - 30px);
   }
 
-  tbody tr:nth-of-type(even) {
-    background-color: rgb(232, 241, 245);
-  }
-
   tbody tr:nth-of-type(odd) {
-    background-color: white;
+    background-color: ${p => p.theme.colors.white};
   }
 `;

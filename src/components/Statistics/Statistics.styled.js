@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 
 export const StatTitle = styled.h2`
-  text-transform: uppercase;
   padding-top: ${p => p.theme.space[4]}px;
   padding-bottom: ${p => p.theme.space[4]}px;
   color: rgba(0, 0, 0, 0.7);

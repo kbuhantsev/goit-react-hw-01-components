@@ -9,34 +9,35 @@ export const ProfileDiv = styled.div`
   margin: 20px auto;
 
   background-color: white;
-  border-radius: 5px;
+  border-radius: ${p => p.theme.radii.normal};
 
-  color: ${p => p.theme.colors.lightFreyFont};
-  font-weight: 500;
+  color: ${p => p.theme.colors.lightGreyFont};
+  font-weight: ${p => p.theme.fontWeights.medium};
 
   box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.3);
 `;
 
 export const Avatar = styled.img`
   width: 10em;
-  border-radius: 50%;
-  background-color: ${p => p.theme.colors.lightFreyFont};
+  border-radius: ${p => p.theme.radii.round};
+  background-color: ${p => p.theme.colors.lightGreyFont};
 `;
 
 export const Name = styled.p`
-  font-size: 2em;
-  font-weight: 700;
+  font-size: ${p => p.theme.fontSizes.xl}px;
+  font-weight: ${p => p.theme.fontWeights.bold};
   color: ${p => p.theme.colors.darkGreyFont};
 `;
 
 export const UserContacts = styled.p`
-  font-size: 1.2em;
+  font-size: ${p => p.theme.fontSizes.l}px;
 `;
 
 export const Stats = styled.ul`
   display: flex;
   width: 100%;
-  border-top: 1px solid ${p => p.theme.colors.lightFreyFont};
+  border-top: ${p => p.theme.borders.normal};
+  ${p => p.theme.colors.lightGreyFont};
 
   & > li {
     display: flex;
@@ -49,13 +50,14 @@ export const Stats = styled.ul`
     background-color: ${p => p.theme.colors.statBgColor};
 
     &:first-of-type {
-      border-bottom-left-radius: 5px;
+      border-bottom-left-radius: ${p => p.theme.radii.normal};
     }
     &:last-child {
-      border-bottom-right-radius: 5px;
+      border-bottom-right-radius: ${p => p.theme.radii.normal};
     }
     &:not(:last-child) {
-      border-right: 1px solid ${p => p.theme.colors.lightFreyFont};
+      border-right: ${p => p.theme.borders.normal};
+      ${p => p.theme.colors.lightGreyFont};
     }
   }
 `;
@@ -66,7 +68,7 @@ export const Label = styled.span`
 `;
 
 export const Quantity = styled.span`
-  font-size: 1.3em;
-  font-weight: 700;
+  font-size: ${p => p.theme.fontSizes.l}px;
+  font-weight: ${p => p.theme.fontWeights.bold};
   color: ${p => p.theme.colors.darkGreyFont};
 `;
